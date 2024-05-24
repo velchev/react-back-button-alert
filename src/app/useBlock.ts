@@ -10,13 +10,11 @@ export const useLeavePageConfirm = (
 
   useEffect(() => {
     const handler = () => {
-        debugger
       if (isConfirm && !window.confirm(message)) {
-        console.log('calling the api')
-        // throw "Route Canceled";
+        // console.log('calling the api')
+        throw "Route Canceled";
       }
     };
-debugger
     Router.events.on("routeChangeStart", handler);
 
     return () => {
