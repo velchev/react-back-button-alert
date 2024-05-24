@@ -1,7 +1,12 @@
+'use client'
+
 import Image from "next/image";
 import styles from "./page.module.css";
-
+import { useLeavePageConfirm } from "./useBlock";
 export default function Home() {
+
+  var aa = useLeavePageConfirm(true, 'nevers shown');
+
   return (
     <main className={styles.main}>
       <div className={styles.description}>
